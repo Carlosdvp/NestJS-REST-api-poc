@@ -59,3 +59,16 @@ We need some sort of authentication, users and bookmarks. Create folders for eac
 - Start by checking prisma.io and getting familiar with the library; then install the CLI and the client
 - invoke prisma like this: 'npx prisma'
 - setup the prisma project: 'npx prisma init'
+- Define the schema for the project
+
+### Populate and connect to the DB
+
+- To create the DB tables run: 'npx prisma migrate dev'
+- You can preview the DB by using the following command: 'npx prisma studio'
+
+- TODO: later I can also connect to the DB by using HeidiSQL
+
+### Integrate Prisma
+
+- Create a new module for prisma logic: 'nest g module prisma'
+
