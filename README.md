@@ -71,4 +71,18 @@ We need some sort of authentication, users and bookmarks. Create folders for eac
 ### Integrate Prisma
 
 - Create a new module for prisma logic: 'nest g module prisma'
+- import in the other modules
+
+## Phase II
+
+### Sign up module 
+
+We need to send the email and password in the POST request.
+
+- add validation to the input
+- add a filter to strip out non-existent fields (for example: {email: cat@cat.com, password: 123, id: 1}) where id is not a field in our auth dto, so it will get stripped out before being passed into the API
+- add encryption lib to hash the password
+- add hashing function to signup method
+- update Prisma model so we don;t end up with duplicate signups, email should be unique in the db
+
 
