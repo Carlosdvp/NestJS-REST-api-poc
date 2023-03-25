@@ -89,4 +89,10 @@ We need to send the email and password in the POST request.
 ### Sign-in module
 
 - Update the auth controller and then complete the method in the auth service
-- 
+- Find the user by email, compare the password and return the usr, otherwise throw an exception
+
+### Add some npm scripts to handle the dev DB operations
+
+- add some scripts to package.json
+
+
