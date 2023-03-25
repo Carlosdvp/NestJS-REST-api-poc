@@ -83,6 +83,10 @@ We need to send the email and password in the POST request.
 - add a filter to strip out non-existent fields (for example: {email: cat@cat.com, password: 123, id: 1}) where id is not a field in our auth dto, so it will get stripped out before being passed into the API
 - add encryption lib to hash the password
 - add hashing function to signup method
-- update Prisma model so we don;t end up with duplicate signups, email should be unique in the db
+- update Prisma model so we don't end up with duplicate signups, email should be unique in the db
+- use a try/catch block to handle the duplicate email error
 
+### Sign-in module
 
+- Update the auth controller and then complete the method in the auth service
+- 
