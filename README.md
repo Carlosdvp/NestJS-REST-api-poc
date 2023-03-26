@@ -101,3 +101,10 @@ We need to send the email and password in the POST request.
 - install passport and jwt packages
 - Implement JWT's for signup and signin methods
 - Add a folder: /strategy to implement a jwt strategy
+
+### User Module
+
+- add a useers/me route and some basi logic for testing
+- add a NestJS Guard to the route, check for the strategy we are using
+- in the validate method inside the jwt.strategy get the user info from the DB
+- 
