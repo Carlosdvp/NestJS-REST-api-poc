@@ -93,10 +93,11 @@ We need to send the email and password in the POST request.
 
 ### Add some npm scripts to handle the dev DB operations
 
-- add some scripts to package.json
+- add some scripts to package.json to automate some of the database operations
 
 ### Authentication with Passport (Epress pkg) and JWT
 
 - created a new branch to implement the authentication and user authorization functionality
-
-
+- install passport and jwt packages
+- Implement JWT's for signup and signin methods
+- Add a folder: /strategy to implement a jwt strategy
