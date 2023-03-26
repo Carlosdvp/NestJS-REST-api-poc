@@ -95,4 +95,8 @@ We need to send the email and password in the POST request.
 
 - add some scripts to package.json
 
+### Authentication with Passport (Epress pkg) and JWT
+
+- created a new branch to implement the authentication and user authorization functionality
+
 
