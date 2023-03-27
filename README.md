@@ -73,7 +73,9 @@ We need some sort of authentication, users and bookmarks. Create folders for eac
 - Create a new module for prisma logic: 'nest g module prisma'
 - import in the other modules
 
-## Phase II
+***************************************************************************************************************
+
+## Phase II - Modules
 
 ### Sign up module 
 
@@ -107,4 +109,12 @@ We need to send the email and password in the POST request.
 - add a useers/me route and some basi logic for testing
 - add a NestJS Guard to the route, check for the strategy we are using
 - in the validate method inside the jwt.strategy get the user info from the DB
-- 
+- clean up the user controller by
+  - abstracting away the AuthGuard into it's own class, create a new folder 
+  - create a custom decorator to GetUser()
+
+*************************************************************************************************************
+
+## Phase III - E2E Testing
+
+We will use pactum.js for the e2e testing of the api. 
