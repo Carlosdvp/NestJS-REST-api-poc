@@ -117,4 +117,11 @@ We need to send the email and password in the POST request.
 
 ## Phase III - E2E Testing
 
-We will use pactum.js for the e2e testing of the api. 
+We will use Jest as the test runner and Pactum for the requests to test the api.
+
+- setup a Test DB for testing, it will be created and destroyed on every run of the testing suite
+- you can also add the --watch flag to the test:e2e script to run the tests every time a new one is added
+- and you should also add the --no-cache flag if you do the previous one
+
+- the idead behind this is to emulate our server in the testing suite, we create an instance of the Nest application and make sure it has all the features and options defined in the ./src/main.ts file
+
