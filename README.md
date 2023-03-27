@@ -140,3 +140,10 @@ For some reason this script doesn't work: "prisma:test:deploy": "dotenv -e .env.
 - we use a new method in the prisma.service to clar the Db after every test run
 
 - I don't see the need to remove and then re-create the docker container for the Test DB, so I removed that script.
+
+
+### Write the tests for the Auth Module
+
+- Test Signup and Signin functionality and possible errors.
+- use a pactum feature where we can grab and store the access_toekn for a user, so we can use it in other tests: '.stores('nameOfTheVariable', 'access_token'
+- 
