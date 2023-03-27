@@ -115,8 +115,16 @@ describe('App e2e', () => {
   });
 
   describe('User', () => {
-    describe('Get current user', () => {
+    describe('Get me', () => {
+      it('should get the current user', () => {
 
+        return pactum.spec()
+          .get('/users/me')
+          .withHeaders({
+            Authorization: 'Bearer $S{userAccessToken}'
+          })
+          .expectStatus(200)
+      })
     });
 
     describe('Edit user', () => {});
@@ -126,7 +134,7 @@ describe('App e2e', () => {
     describe('Create bookmark', () => {});
     describe('Get bookmarks', () => {});
     describe('Get bookmarks by id', () => {});
-    describe('Edit bookmark', () => {});
-    describe('Delete bookmark', () => {});
+    describe('Edit bookmark by id', () => {});
+    describe('Delete bookmark by id', () => {});
   });
 })
