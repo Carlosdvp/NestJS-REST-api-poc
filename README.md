@@ -125,3 +125,18 @@ We will use Jest as the test runner and Pactum for the requests to test the api.
 
 - the idead behind this is to emulate our server in the testing suite, we create an instance of the Nest application and make sure it has all the features and options defined in the ./src/main.ts file
 
+### Setup the Testing DB
+
+- add one more db to the docker-compose file
+- update the package.json scripts with commands for the test db, should be similar to the ones we have for the dev db
+- add npm package 'dotenv-cli' to help prisma manage different environments, in this case dev and test.
+- this is beacuse Prisma only grabs the environment variables from the '.env' file
+- add 'dotenv -e .env.test -- jest ...' to the e2e testing script
+- and also to the test db related scripts
+
+For some reason this script doesn't work: "prisma:test:deploy": "dotenv -e .env.test -- prisma migrate deploy" when I run the command 'npm run prisma:test:deploy', same error with: 'npx prisma:test:deploy'
+  - it runs corrently if I write the comand directly on the terminal: 'npx dotenv -e .env.test -- prisma migrate deploy'
+
+- we use a new method in the prisma.service to clar the Db after every test run
+
+- I don't see the need to remove and then re-create the docker container for the Test DB, so I removed that script.

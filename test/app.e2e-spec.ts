@@ -1,12 +1,13 @@
 import { Test } from '@nestjs/testing';
 import { INestApplication, ParseIntPipe, ValidationPipe } from '@nestjs/common';
 import { AppModule } from '../src/app.module';
+import { PrismaService } from '../src/prisma/prisma.service';
 
 describe('App e2e', () => {
   let app: INestApplication;
+  let prisma: PrismaService;
 
   beforeAll(async () => {
-
     const moduleRef = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
@@ -17,12 +18,18 @@ describe('App e2e', () => {
         whitelist: true,
       }),
     );
-
     await app.init();
+
+    prisma = app.get(PrismaService);
+    await prisma.cleanDb();
   });
 
   afterAll(() => {
     app.close();
+  });
+
+  describe('Auth', () => {
+
   });
   
   it.todo('should pass');
