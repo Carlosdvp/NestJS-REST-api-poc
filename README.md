@@ -146,4 +146,16 @@ For some reason this script doesn't work: "prisma:test:deploy": "dotenv -e .env.
 
 - Test Signup and Signin functionality and possible errors.
 - use a pactum feature where we can grab and store the access_toekn for a user, so we can use it in other tests: '.stores('nameOfTheVariable', 'access_token'
-- 
+
+### Write the tests for the User Module
+
+- write a method to editUsers() and use it in the tests
+- cover the possible use cases for the user
+
+### Complete the controller, service and then write the tests for the Bookmark Module
+
+- create a controller and service for the bookmark
+- define the routes and implement similar logic to that of the user Module
+- write the methods for the bookmarks service
+- import these into the controller
+- write the logic for the tests
